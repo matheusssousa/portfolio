@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import Router from "./routes/route";
+import './index.css';
+import Sidebar from "./components/Sidebar";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AnimatePresence mode='wait'>
+        <div className="w-full absolute bottom-0 z-20">
+          <Sidebar />
+        </div>
+        <Router />
+      </AnimatePresence>
+    </BrowserRouter>
   );
 }
 

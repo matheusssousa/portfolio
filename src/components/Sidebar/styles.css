@@ -1,0 +1,35 @@
+.navbar {
+    @apply rounded-full bg-white bg-opacity-20 backdrop-blur-sm fixed bottom-1 p-2 flex flex-col text-white 
+}
+
+/* LINKS */
+.link {
+    @apply text-white
+}
+
+.link-active{
+    @apply bg-white bg-opacity-80 text-black rounded-full drop-shadow-lg p-1
+}
+
+/* BOTAO DE ABRIR E FECHAR */
+.buttonNavbarOpenToClose {
+    @apply cursor-pointer hover:text-gray-300 duration-200 drop-shadow-md
+}
+
+/* CONTAINER DE DENTRO */
+.CircleContainer {
+    @apply absolute flex justify-center items-center w-full h-full bg-clip-text
+}
+
+/* POSIÇÕES DE CADA LINK DENTRO DO CIRCLE CONTAINER */
+.link:nth-child(1) {
+    @apply left-5 absolute
+}
+
+.link:nth-child(2) {
+    @apply bottom-4 absolute
+}
+
+.link:nth-child(3) {
+    @apply right-5 absolute
+}

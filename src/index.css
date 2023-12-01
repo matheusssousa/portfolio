@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aquire');
+@import url('https://fonts.cdnfonts.com/css/cheorcy');
+
+* {
+    font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.font-aquire {
+    font-family: 'Aquire', sans-serif;
+}
+
+.font-cheorcy {
+    font-family: 'Cheorcy', sans-serif;
+}
+
+:root {
+    @apply bg-black
+}
+
+.body-page-home {
+    background: radial-gradient(ellipse at 20% 30%, #22d3ee, transparent 90%),
+        radial-gradient(ellipse at 80% 70%, #6366f1, transparent 90%);
+    background-size: 200% 200%;
+    background-blend-mode: difference;
+    animation: animatedGradient 20s ease infinite;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.body-page-about {
+    background: radial-gradient(ellipse at 20% 30%, rgb(105, 34, 238), transparent 90%),
+        radial-gradient(ellipse at 80% 70%, #ac63f1, transparent 60%);
+    background-size: 200% 200%;
+    background-blend-mode: color;
+    animation: animatedGradient 20s ease infinite;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.body-page-projects {
+    background: radial-gradient(ellipse at 20% 30%, rgb(12, 204, 204), transparent 90%),
+        radial-gradient(ellipse at 80% 70%, rgb(236, 51, 144), transparent 90%);
+    background-size: 200% 200%;
+    background-blend-mode: color;
+    animation: animatedGradient 20s ease infinite;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+@keyframes animatedGradient {
+    0% {
+        background-position: 0% 0%, 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 100%, 0% 0%;
+    }
+
+    100% {
+        background-position: 25% 25%, 50% 50%;
+    }
 }
