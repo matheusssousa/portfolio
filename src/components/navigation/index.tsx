@@ -9,7 +9,7 @@ type NavigationProps = {
 };
 
 const Navigation = ({ setCurrentSection, currentSection, currentMap }: NavigationProps) => {
-    let ColorCurrent = ThemeCurrent(currentSection);
+    const ColorCurrent = ThemeCurrent(currentSection);
 
     return (
         <motion.nav
